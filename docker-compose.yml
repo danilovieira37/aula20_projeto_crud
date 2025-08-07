@@ -11,9 +11,9 @@ services:
     networks:
       - mynetwork
   backend:
-    build: 
+    build:
       context: ./backend
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     volumes:
       - ./backend:/app
     environment:
@@ -23,7 +23,7 @@ services:
     depends_on:
       - postgres
     networks:
-      - mynetwork    
+      - mynetwork
 
   # frontend:
 
